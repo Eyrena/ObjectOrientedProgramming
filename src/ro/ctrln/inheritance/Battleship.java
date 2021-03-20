@@ -1,12 +1,15 @@
 package ro.ctrln.inheritance;
 
+import ro.ctrln.util.ProjectUtils;
+
 import java.util.Objects;
 
 // POJO Plain Old Java Object
 
 public class Battleship {
 
-    private String battleshipName;
+    public static final int ID = 1;
+    protected String battleshipName;
     private int battleshipCapacity;
 
     public String getBattleshipName() {
@@ -44,5 +47,9 @@ public class Battleship {
     @Override
     public int hashCode() {
         return Objects.hash(battleshipName, battleshipCapacity);
+    }
+
+    public void escapeProcedure (int escapePods){
+        ProjectUtils.printMessage("Escape procedure initiated in Battleship class with " + escapePods + " escape Pods!");
     }
 }

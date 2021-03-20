@@ -1,5 +1,7 @@
 package ro.ctrln.inheritance;
 
+import ro.ctrln.util.ProjectUtils;
+
 public class XWingStarFighter implements Starship {
 
     private String destination;
@@ -7,7 +9,7 @@ public class XWingStarFighter implements Starship {
 
     @Override
     public void warp() {
-        System.out.println("XWingStarFighter este acum in viteza Warp!");
+        ProjectUtils.printMessage("XWingStarFighter este acum in viteza Warp!");
     }
 
     @Override
